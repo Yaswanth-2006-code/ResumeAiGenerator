@@ -12,11 +12,11 @@ try:
     # Recommended: Use Streamlit's secrets management
     # To use this, create a file .streamlit/secrets.toml and add:
     # GOOGLE_API_KEY = "YOUR_API_KEY_HERE"
-    API_KEY = st.secrets["AIzaSyDmobI8UE3nFO4BEyTrr6-Ms9cSJQqxjxI"]
+    API_KEY = st.secrets["your api key"]
 except:
     # Fallback for testing: Paste your key directly
     # WARNING: Do not share your code publicly with the key pasted here.
-    API_KEY = "AIzaSyDmobI8UE3nFO4BEyTrr6-Ms9cSJQqxjxI"
+    API_KEY = "your api key"
 
 # If the API_KEY is still the placeholder, show an error.
 if API_KEY == "PASTE_YOUR_API_KEY_HERE" or not API_KEY:
@@ -115,4 +115,5 @@ if submitted:
             st.markdown(generated_resume)
     else:
         # If any required field is missing, show a warning message
+
         st.warning("Please fill in all required fields to generate your resume. LinkedIn and Projects are optional.")
